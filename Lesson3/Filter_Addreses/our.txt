@@ -1,0 +1,5 @@
+5Moscow, Stroiteley, 34, 12
+Novokyzneck, Nauki, 5, 16
+Omsk, Pushkina, 2, 13
+Moscow, Arbat, 4, 1
+Novosibirsk, Mira, 85, 64
