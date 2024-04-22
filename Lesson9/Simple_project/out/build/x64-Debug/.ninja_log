@@ -1,0 +1,4 @@
+# ninja log v5
+4	260	7355129882946259	build.ninja	301de299748e16cf
+3	631	7355003454453141	CMakeFiles/hello_Cmake.dir/my_first_cmake_program.cpp.obj	802d8df638250fe5
+632	1084	7355003457972978	hello_Cmake.exe	422069b20d1efe14
