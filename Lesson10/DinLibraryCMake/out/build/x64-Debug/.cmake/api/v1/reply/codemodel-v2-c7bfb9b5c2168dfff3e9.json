@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DinLibraryCMake",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Main_Leaver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Main_Leaver-Debug-28498509cf77004531c1.json",
+					"name" : "Main_Leaver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MyLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MyLib-Debug-07233a7da9fd918be709.json",
+					"name" : "MyLib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/!!!Education/HomeWorks/Lesson1/Lesson9/DinLibraryCMake/out/build/x64-Debug",
+		"source" : "E:/!!!Education/HomeWorks/Lesson1/Lesson9/DinLibraryCMake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

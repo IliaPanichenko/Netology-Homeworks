@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(DinLibraryCMake)
+set (CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library (MyLib SHARED Leaver.cpp Leaver.h)
+add_executable (Main_Leaver Main_Leaver.cpp)
+target_link_libraries (Main_Leaver MyLib)

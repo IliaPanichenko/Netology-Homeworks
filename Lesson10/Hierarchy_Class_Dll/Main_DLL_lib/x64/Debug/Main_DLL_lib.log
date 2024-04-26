@@ -1,0 +1,32 @@
+﻿  Triangle.cpp
+E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\Triangle.cpp(15,12): warning C4273: 'Triangle::Triangle': inconsistent dll linkage
+  E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\Triangle.h(20,8):
+  see previous definition of '{ctor}'
+  
+  equilateral_triangle.cpp
+E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\equilateral_triangle.cpp(14,24): warning C4273: 'equilateral_triangle::equilateral_triangle': inconsistent dll linkage
+  E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\equilateral_triangle.h(8,2):
+  see previous definition of '{ctor}'
+  
+  isosceles_triangle.cpp
+E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\isosceles_triangle.cpp(14,29): warning C4273: 'isosceles_triangle::isosceles_triangle': inconsistent dll linkage
+  E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\isosceles_triangle.h(8,2):
+  see previous definition of '{ctor}'
+  
+  right_triangle.cpp
+E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\right_triangle.cpp(14,18): warning C4273: 'right_triangle::right_triangle': inconsistent dll linkage
+  E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\right_triangle.h(12,2):
+  see previous definition of '{ctor}'
+  
+  Generating Code...
+     Creating library E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\x64\Debug\Main_DLL_lib.lib and object E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\x64\Debug\Main_DLL_lib.exp
+LINK : warning LNK4217: symbol '??0Triangle@@QEAA@HHHHHH@Z (public: __cdecl Triangle::Triangle(int,int,int,int,int,int))' defined in 'Triangle.obj' is imported by 'equilateral_triangle.obj' in function '"public: __cdecl equilateral_triangle::equilateral_triangle(int,int,int,int,int,int)" (??0equilateral_triangle@@QEAA@HHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Triangle@@QEAA@HHHHHH@Z (public: __cdecl Triangle::Triangle(int,int,int,int,int,int))' defined in 'Triangle.obj' is imported by 'isosceles_triangle.obj' in function '"public: __cdecl isosceles_triangle::isosceles_triangle(int,int,int,int,int,int)" (??0isosceles_triangle@@QEAA@HHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Triangle@@QEAA@HHHHHH@Z (public: __cdecl Triangle::Triangle(int,int,int,int,int,int))' defined in 'Triangle.obj' is imported by 'right_triangle.obj' in function '"public: __cdecl right_triangle::right_triangle(int,int,int,int,int,int)" (??0right_triangle@@QEAA@HHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Quadrangle@@QEAA@HHHHHHHH@Z (public: __cdecl Quadrangle::Quadrangle(int,int,int,int,int,int,int,int))' defined in 'Quadrangle.obj' is imported by 'Parallelogram.obj' in function '"public: __cdecl Parallelogram::Parallelogram(int,int,int,int,int,int,int,int)" (??0Parallelogram@@QEAA@HHHHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Quadrangle@@QEAA@HHHHHHHH@Z (public: __cdecl Quadrangle::Quadrangle(int,int,int,int,int,int,int,int))' defined in 'Quadrangle.obj' is imported by 'Rectangle.obj' in function '"public: __cdecl Rectangle::Rectangle(int,int,int,int,int,int,int,int)" (??0Rectangle@@QEAA@HHHHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Quadrangle@@QEAA@HHHHHHHH@Z (public: __cdecl Quadrangle::Quadrangle(int,int,int,int,int,int,int,int))' defined in 'Quadrangle.obj' is imported by 'Rhombus.obj' in function '"public: __cdecl Rhombus::Rhombus(int,int,int,int,int,int,int,int)" (??0Rhombus@@QEAA@HHHHHHHH@Z)'
+LINK : warning LNK4217: symbol '??0Quadrangle@@QEAA@HHHHHHHH@Z (public: __cdecl Quadrangle::Quadrangle(int,int,int,int,int,int,int,int))' defined in 'Quadrangle.obj' is imported by 'Square.obj' in function '"public: __cdecl Square::Square(int,int,int,int,int,int,int,int)" (??0Square@@QEAA@HHHHHHHH@Z)'
+LINK : warning LNK4217: symbol '?print_metod@Figure@@UEAAXXZ (public: virtual void __cdecl Figure::print_metod(void))' defined in 'Figure.obj' is imported by 'Quadrangle.obj' in function '"public: virtual void __cdecl Quadrangle::print_metod(void)" (?print_metod@Quadrangle@@UEAAXXZ)'
+LINK : warning LNK4217: symbol '?print_metod@Figure@@UEAAXXZ (public: virtual void __cdecl Figure::print_metod(void))' defined in 'Figure.obj' is imported by 'Triangle.obj' in function '"public: virtual void __cdecl Triangle::print_metod(void)" (?print_metod@Triangle@@UEAAXXZ)'
+  Main_DLL_lib.vcxproj -> E:\!!!Education\HomeWorks\Lesson1\Lesson9\Hierarchy_Class_Dll\Main_DLL_lib\x64\Debug\Main_DLL_lib.dll

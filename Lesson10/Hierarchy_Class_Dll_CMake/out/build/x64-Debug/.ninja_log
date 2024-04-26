@@ -1,0 +1,15 @@
+# ninja log v5
+11	437	7358495509277814	CMakeFiles/HierarchyDll.dir/right_triangle.cpp.obj	493f323ae9243fd4
+7	450	7358495509347787	CMakeFiles/HierarchyDll.dir/Square.cpp.obj	aeea319d5ada6226
+30	480	7358495509647824	CMakeFiles/HierarchyDll.dir/Parallelogram.cpp.obj	8944c001ce4b51b4
+19	488	7358495509637782	CMakeFiles/HierarchyDll.dir/Rectangle.cpp.obj	a6860c7ddb46a555
+438	1047	7358495515438291	CMakeFiles/HierarchyDll.dir/Figure.cpp.obj	c16790794f9cfd4
+3	692	7358495511778291	CMakeFiles/HierarchyDll.dir/Triangle.cpp.obj	cafa49e364a905e9
+15	580	7358495510747821	CMakeFiles/HierarchyDll.dir/Rhombus.cpp.obj	ae6a8d50318cd687
+24	742	7358495512328305	CMakeFiles/HierarchyDll.dir/Quadrangle.cpp.obj	9b3e1891c516fdf1
+34	757	7358495512508288	CMakeFiles/HierarchyDll.dir/isosceles_triangle.cpp.obj	14b584b6cac3a672
+450	856	7358495513538299	CMakeFiles/HierarchyDll.dir/equilateral_triangle.cpp.obj	12a811359773752f
+480	1083	7358495515788270	CMakeFiles/Hierarchy_class.dir/Class_Hierarchy.cpp.obj	de3ea82fbadd8596
+1047	1829	7358495522838337	HierarchyDll.dll	221548a66085fdb4
+1047	1829	7358495522838337	HierarchyDll.lib	221548a66085fdb4
+1829	2458	7358495529138346	Hierarchy_class.exe	5ee27dc86d3f4a8
