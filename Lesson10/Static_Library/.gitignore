@@ -21,6 +21,9 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+/Greeter_main/x64/
+/LibraryStatic/x64/
+/LibraryStatic/.vs/
 **/x64/
 **/x86/
 [Ww][Ii][Nn]32/
