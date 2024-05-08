@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-#ifdef DYN_LIB_EXPORTS
+#ifdef DYNLIB_EXPORTS
 #define DYN_LIB_API __declspec(dllexport)
 #else
 #define DYN_LIB_API __declspec(dllimport)

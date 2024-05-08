@@ -1,10 +1,6 @@
 #pragma once
 #include "Figure.h"
-#ifdef MAINDLLLIBDYNAMIC_EXPORTS
-#define MAINDLLLIB_API __declspec(dllexport)
-#else
-#define MAINDLLLIB_API __declspec(dllimport)
-#endif
+
 class Quadrangle : public Figure
 {
 protected:
@@ -19,7 +15,6 @@ protected:
 	int angleD = 0;
 	bool Check() override;
 public:
-	MAINDLLLIB_API
-	Quadrangle (int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD);
-	void print_metod() override;
+	MAINDLLLIB_API Quadrangle (int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD);
+	MAINDLLLIB_API void print_metod() override;
 };
