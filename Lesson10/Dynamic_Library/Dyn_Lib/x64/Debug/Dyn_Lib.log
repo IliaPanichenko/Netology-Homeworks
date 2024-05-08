@@ -1,7 +1,0 @@
-﻿  Leaver.cpp
-E:\!!!Education\HomeWorks\Lesson1\Lesson9\Dynamic_Library\Dyn_Lib\Leaver.cpp(3,21): warning C4273: 'Leaver::leave': inconsistent dll linkage
-  E:\!!!Education\HomeWorks\Lesson1\Lesson9\Dynamic_Library\Dyn_Lib\Leaver.h(15,26):
-  see previous definition of 'leave'
-  
-     Creating library E:\!!!Education\HomeWorks\Lesson1\Lesson9\Dynamic_Library\Dyn_Lib\x64\Debug\Dyn_Lib.lib and object E:\!!!Education\HomeWorks\Lesson1\Lesson9\Dynamic_Library\Dyn_Lib\x64\Debug\Dyn_Lib.exp
-  Dyn_Lib.vcxproj -> E:\!!!Education\HomeWorks\Lesson1\Lesson9\Dynamic_Library\Dyn_Lib\x64\Debug\Dyn_Lib.dll

@@ -1,4 +1,0 @@
-﻿  Task2.cpp
-E:\!!!Education\HomeWorks\Lesson1\Lesson2\Task2\Task2.cpp(38,13): warning C4930: 'Counter DefaultCounter(void)': prototyped function not called (was a variable definition intended?)
-E:\!!!Education\HomeWorks\Lesson1\Lesson2\Task2\Task2.cpp(46,21): warning C4930: 'Counter NewCounter(int)': prototyped function not called (was a variable definition intended?)
-  Task2.vcxproj -> E:\!!!Education\HomeWorks\Lesson1\Lesson2\Task2\x64\Debug\Task2.exe

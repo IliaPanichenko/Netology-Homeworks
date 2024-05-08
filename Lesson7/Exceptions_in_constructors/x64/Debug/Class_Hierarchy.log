@@ -1,5 +1,0 @@
-﻿  Parallelogram.cpp
-E:\!!!Education\HomeWorks\Lesson1\Lesson6\Exceptions_in_constructors\Parallelogram.cpp(2,22): error C2509: 'Check': member function not declared in 'Parallelogram'
-  E:\!!!Education\HomeWorks\Lesson1\Lesson6\Exceptions_in_constructors\Parallelogram.h(3,7):
-  see declaration of 'Parallelogram'
-  

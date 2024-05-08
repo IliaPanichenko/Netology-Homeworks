@@ -1,2 +1,0 @@
-E:\!!!Education\HomeWorks\Lesson1\Lesson4\Class_Hierarchy\x64\Debug\Class_Hierarchy.exe
-E:\!!!Education\HomeWorks\Lesson1\Lesson6\Exceptions_in_constructors\x64\Debug\Class_Hierarchy.exe
