@@ -1,9 +1,0 @@
-8
-Khabarovsk, Myra, 8, 1
-Moscow, Arbat, 4, 1
-Moscow, Stroiteley, 34, 12
-Novokyzneck, Nauki, 5, 16
-Novosibirsk, Mira, 85, 64
-Omsk, Pushkina, 2, 13
-Vladivostok, Kuka, 43, 23
-Vladivostok, Kura, 5, 3

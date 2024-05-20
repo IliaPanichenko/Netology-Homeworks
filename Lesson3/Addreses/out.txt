@@ -1,6 +1,0 @@
-5
-Balashikha, Krupskoi, 9, 10
-NoviSad, Orlovica, 77, 12
-Novosibirsk, Mira, 85, 64
-Omsk, Pushkina, 2, 13
-Moscow, Stroitelniy, 34, 12
