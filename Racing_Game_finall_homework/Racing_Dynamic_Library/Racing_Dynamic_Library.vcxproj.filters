@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ground">
+      <UniqueIdentifier>{a20d97eb-8668-4cc5-8f5c-1c3c05b3baa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Air">
+      <UniqueIdentifier>{d3f1db2a-dab5-4d2f-b1f6-00d14ec4d087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ground">
+      <UniqueIdentifier>{fb193b19-7bab-4012-95f2-d1414ed0a6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Air">
+      <UniqueIdentifier>{911172e9-1a81-4af7-842a-e3d9be22e30f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camel.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="CamelUltra.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Centaur.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Boots.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Broom.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="Carpet.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="Eagle.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Pegasus.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="FlightShip.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="Air.h">
+      <Filter>Header Files\Air</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>Header Files\Ground</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camel.cpp">
+      <Filter>Source Files\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="CamelUltra.cpp">
+      <Filter>Source Files\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Centaur.cpp">
+      <Filter>Source Files\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Boots.cpp">
+      <Filter>Source Files\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Broom.cpp">
+      <Filter>Source Files\Air</Filter>
+    </ClCompile>
+    <ClCompile Include="Carpet.cpp">
+      <Filter>Source Files\Air</Filter>
+    </ClCompile>
+    <ClCompile Include="Eagle.cpp">
+      <Filter>Source Files\Air</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>Source Files\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Pegasus.cpp">
+      <Filter>Source Files\Air</Filter>
+    </ClCompile>
+    <ClCompile Include="FlightShip.cpp">
+      <Filter>Source Files\Air</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
