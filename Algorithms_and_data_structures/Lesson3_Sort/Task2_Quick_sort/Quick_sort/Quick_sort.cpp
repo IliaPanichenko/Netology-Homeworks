@@ -1,12 +1,11 @@
 #include <iostream>
-#include <iterator>
 
-int pivoting(int* arr, int size)
+void quick_sort(int* arr, int size)
 {
     int left = 0;
     int right = size - 1;
-    int pivot = arr[size/2];
-    while (left < right)
+    size_t pivot = arr[size/2];
+    while (left <= right)
     {
         while (arr[left] < pivot)
         {
@@ -16,26 +15,25 @@ int pivoting(int* arr, int size)
         {
             right--;
         }
-        if (left < right)
+        if (left <= right)
         {
-        
         std::swap(arr[left], arr[right]);
         left++;
         right--;
-        
         }
-
     }
-    return left;
-}
-void quick_sort(int* arr, int size)
-{
     if (size <= 1)
+        {
+            return;
+        }
+    if (right > 0)
     {
-        return;
+        quick_sort(arr, right + 1);
     }
-    quick_sort(arr, pivoting(arr, size));
-    quick_sort(arr + (pivoting(arr, size)) + 1, size - (pivoting(arr, size)) - 1);
+    if (left < size)
+    {
+        quick_sort(&arr[left], size - left);
+    }
 }
 void print_orig_arr(int* arr, int size)
 {
@@ -43,6 +41,7 @@ void print_orig_arr(int* arr, int size)
     {
         std::cout << arr[i] << " ";
     }
+    
 }
 int main(int argc, char** argv)
 {
@@ -78,3 +77,85 @@ int main(int argc, char** argv)
 
     return 0;
 }
+
+
+
+
+
+
+//#include <iostream>
+//void print_orig_arr(int* arr, int size)
+//{
+//    for (int i = 0; i < size; i++)
+//    {
+//        std::cout << arr[i] << " ";
+//    }
+//}
+//
+//void quick_sort(int* arr, int size)
+//{
+//    int left = 0;
+//    int right = size - 1;
+//    size_t pivot = arr[size / 2];
+//
+//    while (left <= right)
+//    {
+//        std::cout << "    left: " << left << ", right: " << right << ", pivot: " << pivot << "\n";
+//
+//        while (arr[left] < pivot)
+//        {
+//            std::cout << "      arr[left] (" << arr[left] << ") < pivot (" << pivot << "), increasing left" << "\n";
+//            left++;
+//        }
+//        while (arr[right] > pivot)
+//        {
+//            std::cout << "      arr[right] (" << arr[right] << ") > pivot (" << pivot << "), decreasing right" << "\n";
+//            right--;
+//        }
+//
+//        if (left <= right)
+//        {
+//            std::cout << "      Swapping arr[left] (" << arr[left] << ") and arr[right] (" << arr[right] << ")" << "\n";
+//            std::swap(arr[left], arr[right]);
+//            left++;
+//            right--;
+//            std::cout << "      left: " << left << ", right: " << right << "\n";
+//        }
+//    }
+//
+//    if (size <= 1)
+//    {
+//        return;
+//    }
+//
+//    std::cout << "    Sorting left part: ";
+//    print_orig_arr(arr, right + 1);
+//    std::cout << std::endl;
+//    if (right > 0)
+//    {
+//        quick_sort(arr, right + 1);
+//    }
+//
+//    std::cout << "    Sorting right part: ";
+//    print_orig_arr(&arr[left], size - left);
+//    std::cout << std::endl;
+//    if (left < size)
+//    {
+//        quick_sort(&arr[left], size - left);
+//    }
+//}
+// 
+//int main(int argc, char** argv)
+//{
+//    int arr1[] = { 3, 43, 38, 29, 18, 72, 57, 61, 2, 33 };
+//    int size1 = std::size(arr1);
+//    std::cout << "1) Origin array: ";
+//    print_orig_arr(arr1, size1);
+//    std::cout << "\n";
+//    std::cout << "1) Sorted array: ";
+//    quick_sort(arr1, size1);
+//    print_orig_arr(arr1, size1);
+//    std::cout << "\n\n";
+//
+//    return 0;
+//}
