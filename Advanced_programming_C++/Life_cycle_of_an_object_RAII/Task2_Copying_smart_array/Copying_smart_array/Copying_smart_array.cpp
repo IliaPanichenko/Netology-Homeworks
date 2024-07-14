@@ -3,7 +3,6 @@
 
 class smart_array
 {
-
 private:
     int* arr;
     int curent_size;
@@ -44,23 +43,48 @@ public:
         return arr[index];
     }
 
-    smart_array& operator=(smart_array& other) {
-        if (this != &other) {
+    smart_array& operator=(smart_array& other) 
+    {
+        if (this != &other) 
+        {
             delete[] arr;
             size = other.size;
             curent_size = other.curent_size;
             arr = new int[size];
-            for (int i = 0; i < curent_size; i++) {
+            for (int i = 0; i < curent_size; i++) 
+            {
                 arr[i] = other.arr[i];
             }
         }
         return *this;
     }
 
+    smart_array(smart_array& other)
+    {
+        size = other.size;
+        curent_size = other.curent_size;
+        arr = new int[size];
+        for (int i = 0; i < curent_size; i++)
+        {
+            arr[i] = other.arr[i];
+        }
+    }
+
+    void print_arr_debug(int number) 
+    {
+        std::cout << "Array" << number <<  ": ";
+        for (int i = 0; i < curent_size; i++) 
+        {
+            std::cout << arr[i] << " ";
+        }
+        std::cout << std::endl;
+    }
+
     ~smart_array()
     {
         delete[] arr;
     }
+    
 };
 
 int main()
@@ -70,11 +94,15 @@ int main()
     arr.add_element(4);
     arr.add_element(155);
 
-    smart_array new_array(2);
+    smart_array new_array(arr);
     new_array.add_element(44);
     new_array.add_element(34);
 
-    arr = new_array;
-   
+    new_array.print_arr_debug(1);
+
+    smart_array new_array2(5);
+    new_array2 = arr;
+    new_array2.add_element(8);
+    new_array2.print_arr_debug(2);
     return 0;
 }
