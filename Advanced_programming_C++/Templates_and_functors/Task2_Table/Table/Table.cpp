@@ -35,20 +35,19 @@ public:
         return elements[row_index];
     }
 
-    std::pair <int, int> Size() const 
+    int Size() const
     {
-        return std::make_pair(row, col);
+        return row * col; 
     }
 };
 
-int main() 
+int main()
 {
     auto test = table<int>(2, 3);
     test[0][0] = 4;
     std::cout << test[0][0];
-    std::pair <int, int> size = test.Size();
+    int size = test.Size();
     std::cout << "\n";
-    std::cout << "Rows: " << size.first << "\n";
-    std::cout << "Collumns: " << size.second << "\n";
+    std::cout << "Size: " << size << "\n";
     return 0;
 }
