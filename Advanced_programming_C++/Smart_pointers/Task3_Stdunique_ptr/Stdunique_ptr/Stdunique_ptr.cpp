@@ -37,5 +37,6 @@ int main()
 	std::cout << "Value after assignment: " << *ptr << "\n";
 	int* rawPtr = ptr.release();
 	std::cout << "Raw pointer: " << rawPtr << "\n";
+	delete rawPtr;
 	return 0;
 }
