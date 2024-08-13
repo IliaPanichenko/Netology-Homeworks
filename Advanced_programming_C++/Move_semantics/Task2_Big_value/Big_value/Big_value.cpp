@@ -16,9 +16,19 @@ public:
         }
     }
 
-    big_integer(big_integer&& other) : value(std::move(other.value)) {}
+    big_integer(big_integer&& other) noexcept : value(std::move(other.value)) {}
+    big_integer(const big_integer& other) : value(other.value) {}
 
-    big_integer& operator=(big_integer&& other) 
+    big_integer& operator=(const big_integer& other)
+    {
+        if (this != &other)
+        {
+            value = other.value;
+        }
+        return *this;
+    }
+
+    big_integer& operator=(big_integer&& other) noexcept
     {
         if (this != &other) 
         {

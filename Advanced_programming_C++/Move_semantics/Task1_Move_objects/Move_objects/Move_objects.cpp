@@ -5,9 +5,11 @@
 template <typename T >
 void move_vectors(std::vector<T>& lhs, std::vector<T>& rhs)
 {
-    rhs.reserve(lhs.size() + rhs.size());
     rhs.insert(rhs.end(), std::make_move_iterator(lhs.begin()), std::make_move_iterator(lhs.end()));
     lhs.clear();
+    /*std::vector<T> tmp = std::move(lhs);
+    lhs = std::move(rhs);
+    rhs = std::move(tmp);*/
 }
 int main()
 {
