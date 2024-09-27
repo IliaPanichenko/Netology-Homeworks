@@ -5,22 +5,31 @@
 #include <string>
 #include <map>
 #include <sstream>
+#include <algorithm>
+
+void trim(std::string& str)
+{
+	str.erase(str.begin(), std::find_if(str.begin(), str.end(), [](unsigned char ch)
+		{
+			return !std::isspace(ch);
+		}));
+	str.erase(std::find_if(str.rbegin(), str.rend(), [](unsigned char ch)
+		{
+			return !std::isspace(ch);
+		}).base(), str.end());
+}
+
+std::string normalize_float_string(const std::string & str) 
+{
+	std::string normalized = str;
+	std::replace(normalized.begin(), normalized.end(), ',', '.');
+	return normalized;
+}
 
 class parser_ini
 {
 private:
 	std::map<std::string, std::map<std::string, std::string>> sections;
-	void trim(std::string& str)
-	{
-		str.erase(str.begin(), std::find_if(str.begin(), str.end(), [](unsigned char ch)
-			{
-				return !std::isspace(ch);
-			}));
-		str.erase(std::find_if(str.rbegin(), str.rend(), [](unsigned char ch)
-			{
-				return !std::isspace(ch);
-			}).base(), str.end());
-	}
 public:
 	parser_ini(const std::string& filename)
 	{
@@ -53,7 +62,7 @@ public:
 				std::string var_value = line.substr(equel_pos + 1);
 				trim(var_name);
 				trim(var_value);
-				size_t comment_pos = line.find(";");
+				size_t comment_pos = var_value.find(";");
 				if (comment_pos != std::string::npos)
 				{
 					var_value = var_value.substr(0, comment_pos);
@@ -74,66 +83,78 @@ public:
 			}
 		}
 	}
-	template<typename T>
-	T get_value(const std::string& section_dot_var)
+	std::string get_value_string (const std::string& section, const std::string& var)
 	{
-		size_t dot_pos = section_dot_var.find(".");
-		if (dot_pos == std::string::npos)
-		{
-			throw std::runtime_error("Invalid request format, expected 'section.var'");
-		}
-		std::string section = section_dot_var.substr(0, dot_pos);
-		std::string var_va lue = section_dot_var.substr(dot_pos + 1);
 		auto have_sections = sections.find(section);
 		if (have_sections == sections.end())
 		{
-			throw std::runtime_error("There is no Section " + section);
+			throw std::runtime_error("There is no " + section);
 		}
-		auto var_it = have_sections->second.find(var_value);
+		auto var_it = have_sections->second.find(var);
 		if (var_it == have_sections->second.end())
 		{
-			std::string suggestion = "Value not found. Available variables in section '" + section + "':";
+			std::string suggestion = "Value not found. Available variables in '" + section + "':";
 			for (const auto& var : have_sections->second)
 			{
 				suggestion += "\n~" + var.first;
 			}
 			throw std::runtime_error(suggestion);
 		}
-		std::stringstream ss(var_it->second);
-		T value;
-		if (!(ss >> value))
+		return var_it->second;
+	}
+
+	template <typename T>
+	T get_value(const std::string& string_dot_var)
+	{
+		size_t dot_pos = string_dot_var.find(".");
+		if (dot_pos == std::string::npos)
 		{
-			throw std::runtime_error("Failed to convert value '" + var_it->second + "' to the required type.");
+			throw std::runtime_error("Invalid request format, expected 'section.var'");
 		}
-		return value;
+		std::string section = string_dot_var.substr(0, dot_pos);
+		std::string var = string_dot_var.substr(dot_pos + 1);
+		std::string string_value = get_value_string(section, var);
+		string_value = normalize_float_string(string_value);
+		T result{};
+		if constexpr (std::is_same<int, T>::value)
+		{
+			result = std::stoi(string_value);
+		}
+		else if constexpr (std::is_same<double, T>::value)
+		{
+			result = std::stod(string_value);
+		}
+		else if constexpr (std::is_same<std::string, T>::value)
+		{
+			result = string_value;
+		}
+		else if constexpr (std::is_same<float, T>::value)
+		{
+			result = std::stof(string_value);
+		}
+		else
+			static_assert(sizeof(T) == -1, "no implementation for this type!");
+		return result;
 	}
 
 };
 int main()
 {
-    try 
+	try
 	{
-        parser_ini parser("parser.ini");
+	parser_ini parser("parser.ini");
 
-		double value1 = parser.get_value<double>("Section1.var1");
-		std::cout << "Section1.var1 = " << value1 << "\n";
+	std::cout << "string: " << parser.get_value<std::string>("Section1.var1") << std::endl;
+	std::cout << "double: " << parser.get_value<double>("Section1.var1") << std::endl;
+	std::cout << "int : " << parser.get_value<int>("Section1.var1") << std::endl;
+	std::cout << "float: " << parser.get_value<float>("Section1.var4") << std::endl;
+	std::cout << "string: " << parser.get_value<std::string>("Section1.var2") << std::endl;
+	std::cout << "string: " << parser.get_value<std::string>("Section3.Mode") << std::endl;
 
-		std::string value2 = parser.get_value<std::string>("Section1.var2");
-		std::cout << "Section1.var2 = " << value2 << "\n";
-
-		int value3 = parser.get_value<int>("Section2.var1");
-		std::cout << "Section2.var1 = " << value3 << "\n";
-
-		std::string value4 = parser.get_value<std::string>("Section2.var2");
-		std::cout << "Section2.var2 = " << value4 << "\n";
-
-		std::string mode_value = parser.get_value<std::string>("Section4.var1");
-		std::cout << "Section4.Mode = '" << mode_value << "'" << "\n";
-
-    }
-    catch (const std::exception& e) 
-	{
-        std::cerr << e.what() << "\n";
-    }
-	return 0;
+	}
+catch (const std::exception& e)
+{
+	std::cerr << e.what() << "\n";
+}
+return 0;
 }
